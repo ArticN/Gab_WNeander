@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     }
 
     const char *input_file = argv[1];
-    ASTNode *program = parse_lng_file(input_file);
+    Program *program = parse_lng_file(input_file);
     if (!program) {
         fprintf(stderr, "Erro ao parsear o arquivo %s\n", input_file);
         return 1;
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     generate_code(out, program);
     fclose(out);
 
-    free_ast(program);
+    free_program(program);
     printf("Arquivo ASM gerado com sucesso: %s\n", asm_file);
     return 0;
 }

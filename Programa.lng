@@ -1,8 +1,0 @@
-PROGRAMA "TesteNeander":
-INICIO
-    A = 5;
-    B = -3;
-    C = (A * B) + 10;
-    D = 2;
-    RES = C * D;
-FIM

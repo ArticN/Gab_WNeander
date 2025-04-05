@@ -1,0 +1,6 @@
+PROGRAMA "Teste":
+INICIO
+    A = 2;
+    B = 3;
+    RES = A * B;
+FIM
