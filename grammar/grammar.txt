@@ -1,0 +1,13 @@
+<programa> ::= "PROGRAMA" <espaco> <str> ":" "\n" "INICIO" "\n" <declaracoes>* <resultado> "FIM"
+
+<declaracoes> ::= <espaco>* <var> <espaco>* "=" <espaco>* <expressao> ";" "\n"
+<resultado> ::= <espaco>* "RES" <espaco>* "=" <espaco>* <expressao> ";" "\n"
+
+<expressao> ::= <expressao> <espaco>* ("+" | "-") <espaco>* <termo> | <termo>
+<termo> ::= <termo> <espaco>* "*" <espaco>* <fator> | <fator>
+<fator> ::= <numero> | <var> | "(" <expressao> ")"
+
+<var> ::= ([A-z]) ([A-z] | [0-9])*
+<numero> ::= "-"? [0-9]+
+<str> ::= "\"" ([A-z] | [0-9])* "\""
+<espaco> ::= " "+
